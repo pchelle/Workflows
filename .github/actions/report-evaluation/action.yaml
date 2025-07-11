@@ -59,7 +59,7 @@ runs:
     
     - id: setup-repo
       name: Setup Working Directory for Evaluation
-      uses: Open-Systems-Pharmacology/Workflows/.github/actions/downloader@main
+      uses: pchelle/Workflows/.github/actions/downloader@report_test
       with:
         repo: ${{ inputs.model-repo }}
         version: ${{ inputs.model-version }}
