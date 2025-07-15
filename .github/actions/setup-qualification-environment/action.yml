@@ -63,11 +63,12 @@ runs:
             return("Package installed")
           }
           # Case when install uses url
-          download.file(packageInfo$url, destfile = packageInfo$zip, mode = "wb")
-          unzip(packageInfo$zip)
-          unlink(packageInfo$zip)
-          install.packages(list.files(pattern = "zip"), repos = NULL, type = "binary")
-          unlink(list.files(pattern = "zip"))
+          pak::pak("pchelle/OSPSuite.ReportingEngine@cowplot")
+          #download.file(packageInfo$url, destfile = packageInfo$zip, mode = "wb")
+          #unzip(packageInfo$zip)
+          #unlink(packageInfo$zip)
+          #install.packages(list.files(pattern = "zip"), repos = NULL, type = "binary")
+          #unlink(list.files(pattern = "zip"))
           return("Package installed")
           }
           getPackageRepo <- function(toolName){
