@@ -107,7 +107,6 @@ runs:
           to = newReportPath, 
           copyWordReport = as.logical("${{ inputs.save-word }}")
         )
-        unlink(dirname(qualificationPath), recursive = TRUE)
       shell: Rscript {0}
 
     - id: convert-to-pdf
