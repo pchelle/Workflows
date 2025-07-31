@@ -160,7 +160,7 @@ runs:
       run: |
         if(as.logical("${{ inputs.save-model-file }}")){
           workingDirectory <- normalizePath("${{ inputs.run-directory }}/${{ inputs.snapshot }}", winslash = "/")
-          pkSimPath <- normalizePath("PK-Sim/PKSim.CLI.exe", winslash = "/")
+          pkSimPath <- normalizePath("PK-Sim/PK-Sim/PKSim.CLI.exe", winslash = "/")
           cmdLine <- paste(
             pkSimPath,
             "snap",
