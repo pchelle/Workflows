@@ -68,8 +68,8 @@ runs:
     - id: run-evaluation
       name: Run evaluation
       run: |
-        qualificationRunnerFolder <- normalizePath("QualificationRunner", winslash = "/")
-        pkSimPortableFolder <- normalizePath("PK-Sim", winslash = "/")
+        qualificationRunnerFolder <- normalizePath("QualificationRunner/QualificationRunner", winslash = "/")
+        pkSimPortableFolder <- normalizePath("PK-Sim/PK-Sim", winslash = "/")
         workingDirectory <- normalizePath("${{ inputs.run-directory }}/${{ inputs.snapshot }}", winslash = "/")
         # Load library and clear simulation cache in case
         library(ospsuite.reportingengine)
